@@ -31,11 +31,16 @@ public class CCuentaTest {
     }
 
     @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
+    protected void setUp() throws Exception {
+        double prueba = 250;
+        instance ingresar(prueba);
+        System.out.println("El saldo al inicio es: " +prueba);
+        super.setUp();
     }
 
     @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
+    protected void tearDown() throws Exception {
+        super.tearDown();
     }
     
     @BeforeAll
